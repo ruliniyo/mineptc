@@ -15,11 +15,15 @@ namespace MinePTC
         public Form1()
         {
             InitializeComponent();
+            this.Load += new EventHandler(Form1_Load);
+
+
+
         }
 
         private void btnrefresh_Click(object sender, EventArgs e)
         {
-            webBrowser.Refresh();
+            webKitBrowser1.Refresh();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -29,18 +33,24 @@ namespace MinePTC
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            webBrowser.Navigate("www.minarpesetacoin.com/?refer=263");
-            txtbdireccion.Text = "www.minarpesetacoin.com/?refer=263";
+            {
+                webKitBrowser1.DocumentText =
+                    "<h1><a href=\"http://www.minarpesetacoin.com\">Hello, World!</a></h1>";
+            }
+
+
+
+
         }
 
         private void btnsend_Click(object sender, EventArgs e)
         {
-            webBrowser.Navigate(txtbdireccion.Text);
+            webKitBrowser1.Navigate(txtbdireccion.Text);
         }
 
         private void btnback_Click(object sender, EventArgs e)
         {
-            webBrowser.GoBack();
+            webKitBrowser1.GoBack();
         }
     }
 }
