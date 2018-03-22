@@ -35,7 +35,7 @@ namespace MinePTC
         {
             {
                 webKitBrowser1.DocumentText =
-                    "<h1><a href=\"http://www.minarpesetacoin.com\">Hello, World!</a></h1>";
+                    "<h1><a href=\"http://www.minarpesetacoin.com\">Hola Mundo!</a></h1>";
             }
 
 
