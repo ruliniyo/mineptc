@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtbdireccion = new System.Windows.Forms.TextBox();
             this.btnback = new System.Windows.Forms.Button();
             this.btnrefresh = new System.Windows.Forms.Button();
             this.btnsend = new System.Windows.Forms.Button();
-            this.webBrowser = new System.Windows.Forms.WebBrowser();
+            this.webKitBrowser1 = new WebKit.WebKitBrowser();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,25 +88,26 @@
             this.btnsend.UseVisualStyleBackColor = true;
             this.btnsend.Click += new System.EventHandler(this.btnsend_Click);
             // 
-            // webBrowser
+            // webKitBrowser1
             // 
-            this.webBrowser.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser.Location = new System.Drawing.Point(0, 97);
-            this.webBrowser.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser.Name = "webBrowser";
-            this.webBrowser.ScriptErrorsSuppressed = true;
-            this.webBrowser.Size = new System.Drawing.Size(973, 423);
-            this.webBrowser.TabIndex = 1;
+            this.webKitBrowser1.BackColor = System.Drawing.Color.White;
+            this.webKitBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webKitBrowser1.Location = new System.Drawing.Point(0, 97);
+            this.webKitBrowser1.Name = "webKitBrowser1";
+            this.webKitBrowser1.Size = new System.Drawing.Size(973, 423);
+            this.webKitBrowser1.TabIndex = 1;
+            this.webKitBrowser1.Url = null;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(973, 520);
-            this.Controls.Add(this.webBrowser);
+            this.Controls.Add(this.webKitBrowser1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "MinePTC";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -120,7 +122,7 @@
         private System.Windows.Forms.Button btnsend;
         private System.Windows.Forms.TextBox txtbdireccion;
         private System.Windows.Forms.Button btnback;
-        private System.Windows.Forms.WebBrowser webBrowser;
+        private WebKit.WebKitBrowser webKitBrowser1;
     }
 }
 
