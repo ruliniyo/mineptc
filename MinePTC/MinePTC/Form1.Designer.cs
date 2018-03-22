@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtbdireccion = new System.Windows.Forms.TextBox();
             this.btnback = new System.Windows.Forms.Button();
@@ -104,8 +105,9 @@
             this.ClientSize = new System.Drawing.Size(973, 520);
             this.Controls.Add(this.webKitBrowser1);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "MinePTC";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
